@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body class="container">
+    <div class="banner" data-text="Hover Me"></div>
+    <script >
+        const banner = document.querySelector('.banner')
+        banner.onmousemove=function(e){
+            let xaxis = e.pageX - banner.offsetLeft;
+            let yaxis = e.pageY - banner.offsetTop;
+            banner.style.setProperty('--xaxis',xaxis+'px')
+            banner.style.setProperty('--yaxis',yaxis+'px')
+
+        }
+    </script>
+</body>
+</html>
